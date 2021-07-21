@@ -14,7 +14,9 @@
 	<name>demo</name>
 	<description>Demo project for Spring Boot</description>
 	<properties>
+	<!-- 00000000000000000000000000 -->
 		<java.version>1.8</java.version>
+	<!-- 00000000000000000000000000 -->
 	</properties>
 	<dependencies>
 		<dependency>
