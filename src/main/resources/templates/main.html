@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <!-- Additional CSS Files -->
+  </head>
+  <body>
+    <tr class="center">
+      <td>
+        <h1>
+          <font style="vertical-align: inherit">
+            <font style="vertical-align: inherit">三角形計算器</font>
+          </font>
+        </h1>
+      </td>
+    </tr>
+    <img
+      class="img-float-right lazy-loaded"
+      data-src="https://doza.pro/art/math/geometry/img/triangle-area-5.png"
+      width="280"
+      height="164"
+      alt="根據Heron公式的三角形面積"
+      src="https://doza.pro/art/math/geometry/img/triangle-area-5.png"
+    />
+   <br>
+   <form  form action="#" th:action="@{/main}" th:object="${triangle_sides}" method="post">
+    <input
+        class="katex form-control"
+        th:field="*{side_a}"
+        type="number"
+        value=""
+        placeholder="輸入值a"
+      />
+      <input
+        class="katex form-control"
+        th:field="*{side_b}"
+        type="number"
+        value=""
+        placeholder="輸入值b"
+      />
+      <input
+        class="katex form-control"
+        th:field="*{side_c}"
+        type="number"
+        value=""
+        placeholder="輸入值c"
+      />
+      <input type="submit"/>  
+   </form>
+   <p th:text="'a =  :' +  ${triangle_sides.side_a}"></p>
+   <p th:text="'b =  :' +  ${triangle_sides.side_b}"></p>
+   <p th:text="'c =  :' +  ${triangle_sides.side_c}"></p>
+   <h2>面積為 : <p th:text=" '' +${area}"></p></h2> 
+  </body>
+</html>
